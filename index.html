@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JS Tasks Interactive</title>
+</head>
+<body>
+  <main>
+    <h1>JS Tasks Interactive</h1>
+
+    <form id="taskForm" novalidate>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        autocomplete="off"
+        required
+        aria-describedby="nameError"
+      />
+      <div class="error-message" id="nameError" aria-live="polite"></div>
+
+      <label for="userNumber">Number</label>
+      <input
+        type="number"
+        id="userNumber"
+        name="userNumber"
+        placeholder="Enter a number (-100 to 100)"
+        autocomplete="off"
+        required
+        aria-describedby="numError"
+        min="-100"
+        max="100"
+      />
+      <div class="error-message" id="numError" aria-live="polite"></div>
+
+      <label for="sentence">Short Sentence</label>
+      <input
+        type="text"
+        id="sentence"
+        name="sentence"
+        placeholder="Enter a short sentence"
+        autocomplete="off"
+        required
+        aria-describedby="sentenceError"
+      />
+      <div class="error-message" id="sentenceError" aria-live="polite"></div>
+
+      <fieldset>
+        <legend>Favorite Fruits</legend>
+
+        <div>
+          <label for="fruit1" class="sr-only">Favorite Fruit 1</label>
+          <input
+            type="text"
+            id="fruit1"
+            name="fruit1"
+            placeholder="Fruit 1"
+            autocomplete="off"
+            required
+            aria-describedby="fruit1Error"
+          />
+          <div class="error-message" id="fruit1Error" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="fruit2" class="sr-only">Favorite Fruit 2</label>
+          <input
+            type="text"
+            id="fruit2"
+            name="fruit2"
+            placeholder="Fruit 2"
+            autocomplete="off"
+            required
+            aria-describedby="fruit2Error"
+          />
+          <div class="error-message" id="fruit2Error" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="fruit3" class="sr-only">Favorite Fruit 3</label>
+          <input
+            type="text"
+            id="fruit3"
+            name="fruit3"
+            placeholder="Fruit 3"
+            autocomplete="off"
+            required
+            aria-describedby="fruit3Error"
+          />
+          <div class="error-message" id="fruit3Error" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit" id="runButton">Run Tasks</button>
+        <button type="button" id="resetButton">Reset</button>
+      </div>
+
+      <div class="error-summary" id="errorSummary" role="alert" aria-live="assertive"></div>
+
